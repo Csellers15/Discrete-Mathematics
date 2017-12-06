@@ -157,16 +157,61 @@ def two_to_dec(binarySequence):
     else:
         print(dec)
 
+def menu():
+    print("1. Decimal to binary")
+    print("2. Decimal to hexadecimal")
+    print("3. Binary to decimal")
+    print("4. Hexadecimal to decimal")
+    print("5. Twos complement to Decimal")
+    print("6. Run Test cases")
+    print("7. Exit")
 
+def test():
+     dec_to_bin("5")
+     dec_to_bin("0")
+     dec_to_hex("31")
+     dec_to_hex("0") 
+     bin_to_dec("101")
+     bin_to_dec("000") 
+     hex_to_dec("1F")
+     hex_to_dec("000") 
+     two_to_dec("00101100")
+     two_to_dec("11110000")
+    
 
-#Test cases
-dec_to_bin("5")
-dec_to_bin("0")
-dec_to_hex("31")
-dec_to_hex("0") 
-bin_to_dec("101")
-bin_to_dec("000") 
-hex_to_dec("1F")
-hex_to_dec("000") 
-two_to_dec("00101100")
-two_to_dec("11110000") 
+def main():
+    while(True):
+        print()
+        menu()
+        choice = int(input())
+            
+        if choice == 1:
+            n=input("please enter the number in decimal format: ")
+            dec_to_bin(n)
+            
+        elif choice == 2:
+             n=input("please enter the number in decimal format: ")
+             dec_to_hex(n)
+            
+        elif choice == 3:
+             n = input("please enter the number in binary format: ")
+             bin_to_dec(n)
+        
+        elif choice == 4:
+             n = input("please enter the number in hexadecimal format: ")
+             hex_to_dec(n)
+            
+        elif choice == 5:
+             n=input("please enter the two's comeplement of a: ")
+             two_to_dec(n)
+        
+        elif choice == 6:
+            test()
+        
+        elif choice == 7:
+            break
+
+    
+    
+if __name__ == "__main__":
+    main()
