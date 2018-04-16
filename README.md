@@ -1,3 +1,3 @@
-# Python
+# Discrete MAthmatics
 
-This folder is used for all python projects I develop for either class or individually while I am learning the language.
+This folder is used for all python projects I or my groups created in MTH225 or MTH325.
